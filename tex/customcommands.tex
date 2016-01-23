@@ -1,0 +1,35 @@
+% !TEX root =  thesis.tex
+
+%----------------------------------------------------------------------------------------
+%	CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+% Define all you customized latex commands hereo
+
+% Define a command for a partial derivative (curly d's)
+% Use as:
+%   \partial{x}{t}      => dx / dt
+%   \partial[n]{x}{t}   => d^n x / dt^n
+%
+\newcommand{\deriv}[3][1]{%
+	\ifthenelse{\equal{#1}{1}}{		% true: format without power
+		\ensuremath{\frac{\partial#2}{\partial#3}}
+	}{								% false: format with power
+		\ensuremath{\frac{\partial^{#1}#2}{\partial#3^{#1}}}
+	}%
+}
+
+% Unit shortcuts
+\newcommand{\um}{\ensuremath{\mu \rm{m}}\xspace}
+\newcommand{\degr}{\ensuremath{^{\circ}}\xspace}
+\newcommand{\arcsec}{\ensuremath{^{\prime\prime}}\xspace}
+\newcommand{\Msol}{\ensuremath{M_{\odot}}}
+
+% Scientific notation short cut
+\newcommand{\E}[1]{\ensuremath{\times10^{#1}}}
+
+% A few commands that control brackets
+\newcommand{\sbr}[1]{\ensuremath{\left\{ #1 \right\}}}
+\newcommand{\cbr}[1]{\ensuremath{\left( #1 \right)}}
+\newcommand{\rbr}[1]{\ensuremath{\left[ #1 \right]}}
+

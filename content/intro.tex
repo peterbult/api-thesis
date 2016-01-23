@@ -1,0 +1,36 @@
+% !TEX root = ../tex/thesis.tex
+
+\chapter{Introduction}
+\label{ch:intro}
+
+% Define the location of your plots
+\graphicspath{{./../gfx/Intro/}}
+
+% Main body
+This file contains a thesis template that should help get you started designing your thesis. It is based on the theses of Nathalie Degenaar and Gijs Mulders.
+
+\section{An example section}
+\label{ch1:sec:example}
+    You can reference a section in this chapter (Sec. \ref{ch1:sec:example}),
+    using \verb|Sec. \ref{}|. Alternatively, you can reference to chapter 
+    \autoref{ch:paper1} or a section there (\autoref{ch:p1:data}) using the
+    \verb|\autoref{}| command.  
+    It's good practice to label chapters with \verb|\label{ch1:}|, section with
+    \verb|\label{sec:}|, figures with \verb|\label{fig:}|, equations with
+    \verb|\label{table:}| and equations with \verb|\label{eq:}|. This avoids
+    double labling in a long document like a thesis. 
+
+\subsection{A subsection}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{{figure1.eps}}
+    \caption[]{Number of exoplanets discovered each year since 1995. Data taken from exoplanets.eu. 
+        \label{ch1:fig:figure1}}
+\end{figure}
+
+It was only eighteen years ago that the first planet orbiting another star was discovered by \cite{1995Natur.378..355M}, and the number of exoplanets found has increased ever since (Figure \ref{ch1:fig:figure1}).
+
+\section{Summary: thesis outline}
+You can put an English summary here (don't forget to keep the word summary in the title or the pedel might complain!), or in the end with the dutch summary.
+

@@ -1,0 +1,28 @@
+% !TEX root = ../tex/thesis.tex
+
+% Define a local referenced item command
+\newcommand{\chitem}[1]{\item[Chapter \ref{#1}:] \nameref{#1} \hfill \\}
+
+% Tweak auto reference keyword
+\renewcommand\chapterautorefname{Chapter}
+
+% There is no easy way to generate this automatically
+\chapter{Contribution from co-authors}
+
+\begin{description} 
+    \chitem{ch:intro} %
+        This is where you list the contribution of all your coauthors (see
+        article 15 of the regulations). Note that this is a new requirement
+        and that there is not a standard way of doing this yet.
+
+    \chitem{ch:paper1} %
+        ...
+        
+    \chitem{ch:letter1} %
+        ...
+
+\end{description}
+
+% Reset reference style
+\renewcommand\chapterautorefname{chapter}
+

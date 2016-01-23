@@ -1,0 +1,105 @@
+% !TEX TS-program = PartialThesis
+
+% Most settings such as pagesize controls are hidden 
+% in the apithesis.cls, which also imports a host of
+% helpful packages.
+% 
+% Special options are:
+%   - final / draft
+%   - cropmarks / nocropmarks
+%   - frame / noframe
+%   - print / noprint
+% Because apithesis is a specialized book class, you can
+% also use regular options such as [fleqn, opeany] etc.
+% 
+% In draft mode the document is typeset using B5 page margins
+% on a A4 page size.
+% In final mode the document is typeset using B5 page size,
+% while frames and/or cropmarks will be removed.
+%
+\documentclass[fleqn,draft,noframe,cropmarks]{apithesis}
+
+% Load your customized layout file
+\input{layout}
+
+% Load your custom latex commands
+\input{customcommands}
+
+
+% Prepare the title page information
+\title{Title of Your Thesis}
+\author{Your full name}
+\date{maandag 1 januari 2000, te 12:00}
+\location{Agnietenkapel/Aula}
+\birthplace{[plaats-in-nl] / [place, country]}
+
+
+%----------------------------------------------------------------------------------------
+%	FRONTMATTER
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+%\include{coverpage} 	% optional
+\include{titlepage} 	% mandatory 
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\setcounter{page}{0} 	%\cleardoublepage 
+\input{toc} 			% Table of content
+
+%----------------------------------------------------------------------------------------
+%	THESIS CHAPTERS
+%----------------------------------------------------------------------------------------
+
+% Input all you papers here
+% See the intro and paper1 for some examples of cross-referencing and appendices 
+\input{../content/intro}
+\input{../content/Paper1}
+\input{../content/Letter1}
+\input{../content/appendix}			% optional
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+% If you disabled the bibliography entry in the TOC my might use this
+% command to enable a running head.
+%\lhead{{\sffamily \small \slshape Bibliography}}
+
+\setlength{\bibsep}{0.0pt}	% controls the reference list items separation
+
+% Set bibliography styles:
+%\bibliographystyle{apj} 		% apj style, file apj.bst
+%\bibliographystyle{aa}			% A&A style, file aa.bst
+%\bibliographystyle{mn2e}		% MNRAS style, file mn2e.bst
+
+\bibliographystyle{linked-apj} 	% Customized apj style that recreates ApJ's colored 
+								% hyperlinks to journals [pink] and ADS [blue].
+                                % It assumes your bibentries come from ADS, and have
+                                % the 'adsurl' keyword.
+								% Do not use this style for print edition!
+                	            % Do not blindly use this style, it may still have
+		            			% a few bugs.
+								
+% Load the bibtex library
+% You can use multiple libraries, but watch out for double entries!
+% Also make sure that there are no lingering bibliography or style
+% definitions in the individual chapters. 
+\bibliography{intro,references}
+
+%----------------------------------------------------------------------------------------
+%	BACKMATTER
+%----------------------------------------------------------------------------------------
+
+% The backmatter function turns off chapter numbering
+\backmatter
+
+\input{../content/coauthors}		% mandatory
+%\input{../content/publications}				% optional
+\input{../content/samenvatting} 	% mandatory
+\input{../content/summary}	 		% mandatory
+\input{../content/acknowledgements} % optional (but not really!)
+%\include{afterquote} 				% optional
+
+\end{document}

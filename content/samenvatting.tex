@@ -1,0 +1,23 @@
+% !TEX root = ../tex/thesis.tex
+
+% This makes Figure A instead of Figure 1
+\renewcommand{\thefigure}{\Alph{figure}}
+
+% This resets the figure counter
+\setcounter{figure}{0}
+
+% reset the footnote counter
+\setcounter{footnote}{0}
+
+% Set language to Dutch for correct word-breaks.
+% It also changes the Figure into Figuur, etc.
+\selectlanguage{dutch}
+\renewcommand\chapterautorefname{hoofdstuk}%
+
+\chapter{Nederlandse Samenvatting}
+\lipsum
+
+% Reset language
+\selectlanguage{english}
+\renewcommand\chapterautorefname{chapter}%
+
