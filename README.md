@@ -1,10 +1,6 @@
 
 ## The API thesis template
 
-This template is based on the latex template of Nathalie Degenaar and Gijs Mulders,
-now collected in a latex package and updated to meet the requirements of the 2014 
-doctorate regulations. 
-
 This template is a work in progress. It may still contain a few bugs, employs a
 number of hacks and work-arounds, leaving plenty of room for improvement.
 So, if you find and fix any bugs in this template or otherwise improve it, feel 
